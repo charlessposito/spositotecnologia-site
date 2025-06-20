@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sposito Tecnologia - IA e Automação para Negócios</title>
+    
+    <!-- Importando a fonte 'Poppins' do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS embutidos no HTML para simplicidade -->
+    <style>
+        :root {
+            --dark-bg: #12181F;
+            --text-light: #E0E0E0;
+            --text-secondary: #A0A0A0;
+            --accent-blue: #3A7CA5;
+            --silver-metal: #D9D9D9;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            border-bottom: 1px solid #2a3440;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            color: var(--silver-metal);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 1rem auto;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: #FFFFFF;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: #4a90c2;
+        }
+
+        .columns-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+        }
+
+        .column .icon {
+            font-size: 3rem;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: var(--silver-metal);
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer {
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- SEÇÃO 1: HERÓI -->
+        <section id="home">
+            <!-- IMPORTANTE: Coloque seu logo na pasta 'assets' ao lado deste arquivo html -->
+            <img src="assets/logo.png" alt="Logotipo Sposito Tecnologia" class="logo">
+            <h1>Inteligência Artificial que Trabalha. Automação que Gera Resultados.</h1>
+            <p>Na Sposito Tecnologia, transformamos seus processos complexos e sua prospecção de clientes em uma vantagem competitiva. Nós não entregamos promessas; entregamos agentes de IA que agem.</p>
+            <a href="#contato" class="cta-button">Agende uma Análise Estratégica Gratuita</a>
+        </section>
+
+        <!-- SEÇÃO 2: O PROBLEMA -->
+        <section id="problema">
+            <h2>Sua equipe está gastando tempo com as tarefas erradas?</h2>
+            <div class="columns-container">
+                <div class="column">
+                    <div class="icon">⏳</div>
+                    <h3>Prospecção Lenta</h3>
+                    <p>Sua equipe passa mais tempo procurando por leads do que conversando com eles?</p>
+                </div>
+                <div class="column">
+                    <div class="icon">⚙️</div>
+                    <h3>Processos Repetitivos</h3>
+                    <p>Tarefas como triagem de e-mails e análise de documentos consomem horas preciosas do seu time?</p>
+                </div>
+                <div class="column">
+                    <div class="icon">❓</div>
+                    <h3>Dados sem Inteligência</h3>
+                    <p>Você tem dificuldade em extrair insights claros para tomar decisões estratégicas?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: A SOLUÇÃO -->
+        <section id="solucoes">
+            <h2>Nossas Soluções: Inteligência e Automação como Serviço</h2>
+            <p>Nosso lema é "IAs que agem, Prompts que transformam." Nós criamos soluções de IA sob medida que se integram ao seu negócio para resolver problemas reais.</p>
+            <div class="columns-container">
+                <div class="column">
+                    <h3>Inteligência de Mercado (DaaS)</h3>
+                    <p>Entregamos listas de leads altamente qualificados, com análise de dores e estratégia de abordagem. Receba inteligência, não apenas dados. Ideal para equipes de vendas que precisam de resultados imediatos.</p>
+                </div>
+                <div class="column">
+                    <h3>Automação e IA Customizada</h3>
+                    <p>Analisamos seus processos e desenvolvemos agentes de IA sob medida para automatizar suas tarefas mais críticas. Ideal para empresas que buscam uma vantagem competitiva através da eficiência.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: CASE DE SUCESSO -->
+        <section id="case">
+            <h2>Nosso Case: O Agente ProspectAI Consult</h2>
+            <p class="quote">Para validar nossa tecnologia, enfrentamos um desafio complexo: como encontrar clientes no saturado mercado jurídico? Em vez de meses de prospecção manual, desenvolvemos o ProspectAI. Em uma única execução, o agente analisou mais de 5.000 websites, identificou centenas de leads qualificados e gerou uma estratégia de abordagem para cada um. Nós usamos a mesma tecnologia que vendemos para impulsionar nosso próprio crescimento.</p>
+        </section>
+
+        <!-- SEÇÃO 5: CONTATO -->
+        <section id="contato">
+            <h2>Pronto para transformar seus desafios em oportunidades?</h2>
+            <p>Vamos conversar por 15 minutos. Sem compromisso, sem jargão técnico. Apenas uma conversa estratégica sobre como a IA pode impactar positivamente o seu negócio.</p>
+            <!-- IMPORTANTE: Substitua pelo seu link do Calendly ou deixe o mailto -->
+            <a href="mailto:contato@spositotecnologia.com.br" class="cta-button">Agendar Demonstração</a>
+        </section>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2025 Sposito Tecnologia - Todos os direitos reservados. CNPJ: [SEU CNPJ AQUI]</p>
+        <p>
+            <a href="mailto:contato@spositotecnologia.com.br">contato@spositotecnologia.com.br</a> | 
+            <!-- IMPORTANTE: Substitua pelo link do seu perfil no LinkedIn -->
+            <a href="https://www.linkedin.com/company/sposito-tecnologia/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+</html>
