@@ -137,14 +137,58 @@
         </section>
     </main>
 
-    <!-- SEÇÃO 5: FOOTER / CTA -->
+    <!-- SEÇÃO 5: FOOTER & FORMULÁRIO B2B -->
     <footer id="contato" class="footer-section">
         <div class="container footer-content">
             <h2 class="section-title">A Automação Real Exige Engenharia, Não Mágica.</h2>
-            <p class="section-desc">O ativo mais caro da sua empresa é o tempo cognitivo da sua equipe. Pare de usá-lo para caçar arquivos em pastas antigas e comece a protegê-lo de vazamentos acidentais. Vamos arquitetar uma infraestrutura inteligente, rápida e juridicamente segura para o seu negócio.</p>
+            <p class="section-desc">O ativo mais caro da sua empresa é o tempo cognitivo da sua equipe. Pare de usá-lo para caçar arquivos em pastas antigas e comece a protegê-lo de vazamentos acidentais. Vamos arquitetar uma infraestrutura inteligente e juridicamente segura para o seu negócio.</p>
             
-            <div class="footer-actions">
-                <a href="mailto:charles.sposito@spositotecnologia.com.br" class="btn-cyber">Falar com Charles Sposito</a>
+            <!-- Form Section -->
+            <div class="form-container glass-card">
+                <form action="URL_DO_WEBHOOK_N8N" method="POST" class="cyber-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="empresa">Nome da Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" required placeholder="Ex: Sposito Tecnologia">
+                        </div>
+                        <div class="form-group">
+                            <label for="site">Site ou Endereço *</label>
+                            <input type="text" id="site" name="site" required placeholder="Ex: www.spositotecnologia.com.br">
+                        </div>
+                        <div class="form-group">
+                            <label for="ramo">Ramo de Atividade *</label>
+                            <input type="text" id="ramo" name="ramo" required placeholder="Ex: Advocacia, Indústria, Saúde">
+                        </div>
+                        <div class="form-group">
+                            <label for="contato_input">Email corporativo ou WhatsApp *</label>
+                            <input type="text" id="contato_input" name="contato" required placeholder="email@empresa.com.br">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto *</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione o interesse estratégico...</option>
+                            <option value="Cerebro_Digital">Aegis AI (Cérebro Digital / RAG)</option>
+                            <option value="Prospect_AI">Argos AI (Prospecção B2B)</option>
+                            <option value="On_Premise">Servidor Local (On-Premise)</option>
+                            <option value="Outros">Consultoria / Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição do Problema / Cenário Atual *</label>
+                        <textarea id="descricao" name="descricao" rows="4" required placeholder="Como sua equipe armazena dados hoje? Qual a principal dor que você busca resolver?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-cyber btn-submit">Solicitar Diagnóstico Arquitetural</button>
+                </form>
+            </div>
+
+            <!-- Social & Copyright -->
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/charles-sposito/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
             </div>
 
             <div class="copyright">
