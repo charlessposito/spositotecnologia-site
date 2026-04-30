@@ -1,6 +1,7 @@
 /* ==========================================================================
    GMSD v1.3 - Cyber Industrial Dark Mode (Personal Brand)
    Author: Oráculo Artesão
+   Project: Charles Sposito - AI Solutions Architect
    ========================================================================== */
 
 :root {
@@ -66,7 +67,7 @@ body {
 }
 
 /* Typography Elements */
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: var(--font-heading);
     text-transform: uppercase;
     font-weight: 700;
@@ -117,7 +118,7 @@ h1, h2, h3 {
 }
 
 .section-header .section-desc {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .pt-hero-offset {
@@ -185,6 +186,7 @@ h1, h2, h3 {
     letter-spacing: 4px;
 }
 
+/* Checkbox Hack for Mobile Menu */
 .nav-toggle {
     display: none;
 }
@@ -341,12 +343,6 @@ h1, h2, h3 {
     text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
 }
 
-.btn-submit {
-    margin-top: var(--spacing-sm);
-    width: 100%;
-    text-align: center;
-}
-
 /* =========================================
    GLASS CARDS & GRIDS
    ========================================= */
@@ -417,8 +413,105 @@ h1, h2, h3 {
 }
 
 /* =========================================
+   TESTIMONIALS (SOCIAL PROOF) - VERSÃO FINAL
+   ========================================= */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    align-items: stretch; /* Força todos os cards a terem a mesma altura no grid */
+}
+
+@media (min-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem; /* Garante respiro interno fixo */
+    box-sizing: border-box;
+}
+
+/* Container interno para agrupar aspas, título e texto */
+.testimonial-card > div:first-child {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-mark {
+    color: var(--accent-cyan);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    line-height: 1;
+    height: 1.2rem;      /* Trava a altura para não variar entre cards */
+    opacity: 0.4;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.quote-mark-close {
+    color: var(--accent-cyan);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    line-height: 0;
+    opacity: 0.4;
+    margin-top: 1.5rem;
+    display: block;
+    text-align: right;
+}
+
+.testimonial-headline {
+    font-family: var(--font-heading);
+    color: var(--text-white);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    min-height: 3.2rem;  /* TRAVA DE SIMETRIA: Garante espaço para até 2 linhas de título */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o título na área travada */
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.7;
+}
+
+.testimonial-author {
+    border-top: 1px solid var(--border-light);
+    padding-top: 1.5rem;
+    margin-top: auto;    /* Empurra o autor sempre para o rodapé do card */
+}
+
+.author-name {
+    font-family: var(--font-heading);
+    color: var(--accent-cyan);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.author-role {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
    SPECIFIC COMPONENT STYLES
    ========================================= */
+
 .process-grid {
     counter-reset: step-counter;
     margin-bottom: var(--spacing-lg);
@@ -444,7 +537,6 @@ h1, h2, h3 {
 .result-card {
     border-left: 4px solid var(--accent-cyan);
     background: rgba(0, 240, 255, 0.03);
-    margin-top: 2rem;
 }
 
 .result-header {
@@ -601,6 +693,58 @@ p + p {
 }
 
 /* =========================================
+   READING MODE (LEGAL PAGES)
+   ========================================= */
+.reading-mode {
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(13, 19, 26, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.reading-mode h1 {
+    color: var(--text-white);
+    margin-bottom: var(--spacing-sm);
+    font-size: 2.2rem;
+    border-bottom: 2px solid var(--accent-cyan);
+    padding-bottom: 1rem;
+}
+
+.reading-mode h3 {
+    color: var(--text-white);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
+}
+
+.reading-mode p {
+    color: var(--text-silver);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.reading-mode ul {
+    margin-bottom: var(--spacing-md);
+    padding-left: 1.5rem;
+}
+
+.reading-mode li {
+    color: var(--text-silver);
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+.reading-mode strong {
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+/* =========================================
    FOOTER & SOCIAL LINKS
    ========================================= */
 .footer-section {
@@ -616,10 +760,6 @@ p + p {
 
 .footer-content .section-desc {
     margin: 0 auto var(--spacing-lg) auto;
-}
-
-.footer-actions {
-    margin-bottom: var(--spacing-xl);
 }
 
 .footer-social {
@@ -638,6 +778,24 @@ p + p {
 .social-link:hover {
     color: var(--accent-cyan);
     filter: drop-shadow(0 0 8px var(--accent-cyan-glow));
+}
+
+.footer-links {
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-cyan);
 }
 
 .copyright {
