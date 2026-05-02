@@ -55,8 +55,8 @@
                         <li><strong>Isolamento:</strong><div class="section-desc"> Cada cliente em nossa infraestrutura de nuvem privada opera em instâncias e bancos vetoriais estritamente segmentados.</div></li>
                     </ul>
 
-                    <h3>2. Ética em Web Scraping e Inteligência de Mercado (Argos_AI)</h3>
-                    <p><div class="section-desc">Nossos motores de inteligência comercial B2B (Argos_AI) operam sob rigorosos protocolos éticos de coleta de dados em fontes abertas da internet (OSINT):</div></p>
+                    <h3>2. Ética em Web Scraping e Inteligência de Mercado (Focus_AI)</h3>
+                    <p><div class="section-desc">Nossos motores de inteligência comercial B2B (Focus_AI) operam sob rigorosos protocolos éticos de coleta de dados em fontes abertas da internet (OSINT):</div></p>
                     <ul>
                         <li><strong>Compliance Técnico:</strong><div class="section-desc"> Nossos robôs (Exploradores) respeitam as diretivas do arquivo <code>robots.txt</code> e implementam limites de requisição (<em>Rate Limiting</em>) para não causar instabilidade nos servidores das empresas mapeadas.</div></li>
                         <li><strong>Foco B2B:</strong><div class="section-desc"> A extração concentra-se em dados de Pessoas Jurídicas (Proposta de valor do site, tecnologias utilizadas) disponíveis publicamente. Dados pessoais sensíveis não são raspados nem armazenados sem base legal explícita.<div></li>
@@ -112,7 +112,7 @@
                         <div>
                             <span class="quote-mark">"</span>
                             <div class="testimonial-headline">Scraping com ética e limite de taxa.</div>
-                            <p class="testimonial-text">Contratamos o pipeline de prospecção do Charles (Argos_AI). A auditoria mostrou que o sistema respeita `robots.txt`, usa rate-limiting e extrai apenas dados públicos de pessoa jurídica. É agressivo comercialmente, mas 100% aderente à LGPD.</p>
+                            <p class="testimonial-text">Contratamos o pipeline de prospecção do Charles (Focus_AI). A auditoria mostrou que o sistema respeita `robots.txt`, usa rate-limiting e extrai apenas dados públicos de pessoa jurídica. É agressivo comercialmente, mas 100% aderente à LGPD.</p>
                             <span class="quote-mark-close">”</span>
 			</div>
                         <div class="testimonial-author">
@@ -148,7 +148,7 @@
             
             <!-- Form Section -->
             <div class="form-container glass-card">
-                <form action="http://localhost:5678/webhook/lead-b2b" method="POST" class="cyber-form">
+                <form action="https://api.spositotecnologia.com.br/webhook/lead-b2b" method="POST" class="cyber-form">
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="empresa">Nome da Empresa *</label>
@@ -156,14 +156,14 @@
                         </div>
                         <div class="form-group">
                             <label for="site">Site ou Endereço *</label>
-                            <input type="text" id="site" name="site" required placeholder="Ex: www.spositotecnologia.com.br">
+                            <input type="text" id="site" name="site" required placeholder="Ex: www.spositotecnologia.com">
                         </div>
                         <div class="form-group">
                             <label for="ramo">Ramo de Atividade *</label>
                             <input type="text" id="ramo" name="ramo" required placeholder="Ex: Advocacia, Indústria, Saúde">
                         </div>
                         <div class="form-group">
-                            <label for="contato">Email corporativo ou WhatsApp *</label>
+                            <label for="contato_input">Email corporativo ou WhatsApp *</label>
                             <input type="text" id="contato_input" name="contato" required placeholder="email@empresa.com.br">
                         </div>
                     </div>
@@ -171,9 +171,9 @@
                         <label for="assunto">Assunto *</label>
                         <select id="assunto" name="assunto" required>
                             <option value="">Selecione o interesse estratégico...</option>
-                            <option value="Cerebro_Digital">Aegis_AI (Cérebro Digital / RAG)</option>
-                            <option value="Prospect_AI">Argos_AI (Prospecção B2B)</option>
-                            <option value="On_Premise">Servidor Local (On-Premise)</option>
+                            <option value="Nexus_AI">Nexus_AI (Cérebro Digital / RAG)</option>
+                            <option value="Focus_AI">Focus_AI (Prospecção B2B)</option>
+                            <option value="Dominus_AI">Dominus_AI (Arquitetura Local)</option>
 			    <option value="DPO">Encarregado de Dados (DPO)</option>
                             <option value="Outros">Consultoria / Outros</option>
                         </select>
